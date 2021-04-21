@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">LabsCM20211-Gr01</string>
+    <string name="info_contacto">Información de Contácto</string>
+    <string name="required">Requerido*</string>
+    <string name="mail">Correo</string>
+    <string name="pais">Pais</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="direccion">Dirección</string>
+    <string name="next">Siguiente</string>
 </resources>
