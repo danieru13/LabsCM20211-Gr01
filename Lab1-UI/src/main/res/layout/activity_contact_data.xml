@@ -29,7 +29,7 @@
             style="@style/icon_style" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
+            android:id="@+id/tilTelefono"
             style="@style/textInput_style"
             android:hint="Teléfono"
             app:endIconMode="clear_text"
@@ -51,20 +51,21 @@
             android:id="@+id/ivMail"
             style="@style/icon_style"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/tilTelefono"
             app:srcCompat="@drawable/ic_baseline_email_24" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout3"
+            android:id="@+id/tilCorreo"
             style="@style/textInput_style"
             app:endIconMode="clear_text"
             app:helperText="@string/required"
             app:helperTextTextColor="@color/red"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ivMail"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+            app:layout_constraintTop_toBottomOf="@+id/tilTelefono">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiCorreo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/mail"
@@ -75,20 +76,21 @@
             android:id="@+id/ivPais"
             style="@style/icon_style"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+            app:layout_constraintTop_toBottomOf="@+id/tilCorreo"
             app:srcCompat="@drawable/ic_baseline_public_24" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout4"
+            android:id="@+id/tilPais"
             style="@style/textInput_style"
             android:hint="@string/pais"
             app:helperText="@string/required"
             app:helperTextTextColor="@color/red"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivPais"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+            app:layout_constraintTop_toBottomOf="@+id/tilCorreo">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiPais"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -97,52 +99,54 @@
             android:id="@+id/ivCiudad"
             style="@style/icon_style"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+            app:layout_constraintTop_toBottomOf="@+id/tilPais"
             app:srcCompat="@drawable/ic_baseline_location_city_24" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout6"
+            android:id="@+id/tilCiudad"
             style="@style/textInput_style"
             android:hint="@string/ciudad"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivCiudad"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+            app:layout_constraintTop_toBottomOf="@+id/tilPais">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiCiudad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/ivDireccion"
             style="@style/icon_style"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
+            app:layout_constraintTop_toBottomOf="@+id/tilCiudad"
             app:srcCompat="@drawable/ic_baseline_home_24" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout7"
+            android:id="@+id/tilDireccion"
             style="@style/textInput_style"
             android:hint="@string/direccion"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView9"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
+            app:layout_constraintStart_toEndOf="@+id/ivDireccion"
+            app:layout_constraintTop_toBottomOf="@+id/tilCiudad">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiDireccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textNoSuggestions" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnSiguienteCDA"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:text="@string/next"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+            app:layout_constraintTop_toBottomOf="@+id/tilDireccion" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
