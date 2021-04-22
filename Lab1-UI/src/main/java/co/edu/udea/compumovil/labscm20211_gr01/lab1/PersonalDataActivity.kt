@@ -10,11 +10,13 @@ import android.widget.EditText
 class PersonalDataActivity : AppCompatActivity() {
 
     lateinit var name_input: EditText
+    lateinit var last_name_input: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personal_data)
 
         name_input = findViewById<EditText>(R.id.name_input)
+        last_name_input = findViewById<EditText>(R.id.last_name_input)
         /*val button: Button = findViewById<Button>(R.id.to_contact_data_activity_button)
         button.setOnClickListener { view ->
             nextButtonClickHandler(view)
