@@ -5,4 +5,6 @@
     <string name="gender_input_label">Gender</string>
     <string name="gender_male">Male</string>
     <string name="gender_female">Female</string>
+    <string name="birth_date_input_label">Birth date</string>
+    <string name="birth_date_input_button">Change</string>
 </resources>
