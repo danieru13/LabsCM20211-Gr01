@@ -61,18 +61,22 @@ class ContactDataActivity : AppCompatActivity() {
             var tilCiudad = findViewById<TextInputLayout>(R.id.tilCiudad)
             var tilDireccion = findViewById<TextInputLayout>(R.id.tilDireccion)
             var titulo = findViewById<TextView>(R.id.tvInfoContacto).text.toString()
-            var infoContacto = " " +"\n"+ titulo +": "+ "\n" + tilTelefono.hint.toString() + ": " + textTelefono.toString() +"\n" +
-                    tilCorreo.hint.toString() + ": " + textCorreo.toString() + "\n" +
-                    tilPais.hint.toString() + ": " + textPais.toString() + "\n"
-
+            var infoContacto = " " +"\n"+ titulo +": "+ "\n" + tilTelefono.hint.toString() + ": " + textTelefono.toString() +"\n"
+            if(!textDireccion.toString().isEmpty()){
+                infoContacto = infoContacto + tilDireccion.hint.toString() + ": " + textDireccion.toString() + "\n" +
+                tilCorreo.hint.toString() + ": " + textCorreo.toString() + "\n" +
+                        tilPais.hint.toString() + ": " + textPais.toString() + "\n"
+            }else{
+                infoContacto = infoContacto + tilCorreo.hint.toString() + ": " + textCorreo.toString() + "\n" +
+                        tilPais.hint.toString() + ": " + textPais.toString() + "\n"
+            }
             if(!textCiudad.toString().isEmpty()){
                 infoContacto = infoContacto + tilCiudad.hint.toString() + ": " + textCiudad.toString()+ "\n"
             }
-            if(!textDireccion.toString().isEmpty()){
-                infoContacto = infoContacto + tilDireccion.hint.toString() + ": " + textDireccion.toString() + "\n"
-            }
-            Log.i("Datos obtenidos" ,"\n" + infoContacto)
-            Toast.makeText(this, "Datos obtenidos", Toast.LENGTH_SHORT).show()
+            val mensaje = resources.getString(R.string.datos)
+
+            Log.i(mensaje ,"\n" + infoContacto)
+            Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show()
             return
         }
     }

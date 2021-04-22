@@ -8,6 +8,7 @@
     <string name="direccion">Dirección</string>
     <string name="next">Siguiente</string>
     <string name="telefono">Teléfono</string>
+    <string name="datos">Datos obtenidos</string>
     <array name="countries">
         <item>Argentina</item>
         <item>Bolivia</item>

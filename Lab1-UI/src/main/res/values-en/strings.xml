@@ -9,6 +9,7 @@
     <string name="direccion">Address</string>
     <string name="next">Next</string>
     <string name="telefono">Phone</string>
+    <string name="datos">Data obtained</string>
     <array name="countries">
         <item>Argentina</item>
         <item>Bolivia</item>
