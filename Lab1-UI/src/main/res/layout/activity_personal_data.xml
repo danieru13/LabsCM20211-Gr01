@@ -27,5 +27,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_input"
         tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/gender_input_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/gender_input_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_name_input"/>
+    <RadioGroup
+        android:id="@+id/gender_radio_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/gender_input_label"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/last_name_input">
+
+        <RadioButton android:id="@+id/radio_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender_male" />
+        <RadioButton android:id="@+id/radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender_female" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
