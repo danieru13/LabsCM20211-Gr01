@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.*
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 class ContactDataActivity : AppCompatActivity() {
     var flag = false
@@ -54,16 +55,23 @@ class ContactDataActivity : AppCompatActivity() {
             Toast.makeText(this, "Se deben ingresar los campos obligatorios", Toast.LENGTH_SHORT).show()
             return
         }else{
-            Log.i("Información de contacto", " ")
-            Log.i("Teléfono", textTelefono.toString())
-            Log.i("Correo", textCorreo.toString())
-            Log.i("Pais",textPais.toString())
+            var tilTelefono = findViewById<TextInputLayout>(R.id.tilTelefono);
+            var tilCorreo = findViewById<TextInputLayout>(R.id.tilCorreo)
+            var tilPais = findViewById<TextInputLayout>(R.id.tilPais)
+            var tilCiudad = findViewById<TextInputLayout>(R.id.tilCiudad)
+            var tilDireccion = findViewById<TextInputLayout>(R.id.tilDireccion)
+            var titulo = findViewById<TextView>(R.id.tvInfoContacto).text.toString()
+            var infoContacto = " " +"\n"+ titulo +": "+ "\n" + tilTelefono.hint.toString() + ": " + textTelefono.toString() +"\n" +
+                    tilCorreo.hint.toString() + ": " + textCorreo.toString() + "\n" +
+                    tilPais.hint.toString() + ": " + textPais.toString() + "\n"
+
             if(!textCiudad.toString().isEmpty()){
-                Log.i("Ciudad",textCiudad.toString())
+                infoContacto = infoContacto + tilCiudad.hint.toString() + ": " + textCiudad.toString()+ "\n"
             }
             if(!textDireccion.toString().isEmpty()){
-                Log.i("Dirección: ", textDireccion.toString())
+                infoContacto = infoContacto + tilDireccion.hint.toString() + ": " + textDireccion.toString() + "\n"
             }
+            Log.i("Datos obtenidos" ,"\n" + infoContacto)
             Toast.makeText(this, "Datos obtenidos", Toast.LENGTH_SHORT).show()
             return
         }
