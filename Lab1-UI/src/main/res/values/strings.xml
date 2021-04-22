@@ -14,4 +14,5 @@
         <item>University</item>
         <item>Other</item>
     </string-array>
+    <string name="next_button">Next</string>
 </resources>
