@@ -7,4 +7,11 @@
     <string name="gender_female">Female</string>
     <string name="birth_date_input_label">Birth date</string>
     <string name="birth_date_input_button">Change</string>
+    <string name="education_level_input">Education level</string>
+    <string-array name="education_level_array">
+        <item>Elementary</item>
+        <item>Secondary</item>
+        <item>University</item>
+        <item>Other</item>
+    </string-array>
 </resources>

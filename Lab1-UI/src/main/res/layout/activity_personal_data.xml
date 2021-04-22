@@ -71,4 +71,11 @@
         app:layout_constraintStart_toEndOf="@+id/birth_date_input_label"
         app:layout_constraintTop_toBottomOf="@+id/gender_radio_group"/>
 
+    <Spinner
+        android:id="@+id/education_level_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birth_date_input_button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
