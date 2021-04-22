@@ -83,7 +83,6 @@
             android:id="@+id/tilPais"
             style="@style/textInput_style"
             android:hint="@string/pais"
-
             app:endIconMode="clear_text"
             app:helperText="@string/required"
             app:helperTextTextColor="@color/red"

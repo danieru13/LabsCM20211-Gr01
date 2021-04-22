@@ -10,7 +10,7 @@ import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import com.google.android.material.textfield.TextInputEditText
 
 class ContactDataActivity : AppCompatActivity() {
-
+    var flag = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_data)
@@ -26,8 +26,11 @@ class ContactDataActivity : AppCompatActivity() {
                         setArrayAdapterCities()
                     }
                     else{
-                        //var autoCompleteTextViewCities = findViewById<AutoCompleteTextView>(R.id.acCiudad)
-                        //autoCompleteTextViewCities.setAdapter(null)
+                        if(flag){
+                            var autoCompleteTextViewCities = findViewById<AutoCompleteTextView>(R.id.acCiudad)
+                            autoCompleteTextViewCities.setAdapter(null)
+                            flag = false
+                        }
                     }
                 }
             }
@@ -67,9 +70,10 @@ class ContactDataActivity : AppCompatActivity() {
     }
 
     private fun setArrayAdapterCities(){
+        flag = true
         var autoCompleteTextViewCities = findViewById<AutoCompleteTextView>(R.id.acCiudad)
         var adapterCities = ArrayAdapter(this,android.R.layout.simple_list_item_1,
-        resources.getStringArray(R.array.cities))
+                resources.getStringArray(R.array.cities))
         autoCompleteTextViewCities.setAdapter(adapterCities)
     }
 }
