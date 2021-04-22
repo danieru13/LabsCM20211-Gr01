@@ -3,12 +3,14 @@ package co.edu.udea.compumovil.labscm20211_gr01.lab1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
 import android.view.View
 import android.widget.*
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import com.google.android.material.textfield.TextInputEditText
 
 class ContactDataActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_data)
@@ -16,6 +18,20 @@ class ContactDataActivity : AppCompatActivity() {
         var adapterCountries = ArrayAdapter(this, android.R.layout.simple_list_item_1,
                 resources.getStringArray(R.array.countries))
         autoCompleteTextViewCountries.setAdapter(adapterCountries)
+        findViewById<AutoCompleteTextView>(R.id.acCiudad).setOnFocusChangeListener(View.OnFocusChangeListener { view, hasFocus ->
+            run {
+                if (hasFocus) {
+                    var actualText = autoCompleteTextViewCountries.text.toString()
+                    if (actualText == "Colombia" || actualText == "colombia") {
+                        setArrayAdapterCities()
+                    }
+                    else{
+                        //var autoCompleteTextViewCities = findViewById<AutoCompleteTextView>(R.id.acCiudad)
+                        //autoCompleteTextViewCities.setAdapter(null)
+                    }
+                }
+            }
+        })
         findViewById<Button>(R.id.btnSiguienteCDA).setOnClickListener{comprobarInfo(it)}
     }
 
@@ -45,8 +61,11 @@ class ContactDataActivity : AppCompatActivity() {
             if(!textDireccion.toString().isEmpty()){
                 Log.i("Dirección: ", textDireccion.toString())
             }
+            Toast.makeText(this, "Datos obtenidos", Toast.LENGTH_SHORT).show()
+            return
         }
     }
+
     private fun setArrayAdapterCities(){
         var autoCompleteTextViewCities = findViewById<AutoCompleteTextView>(R.id.acCiudad)
         var adapterCities = ArrayAdapter(this,android.R.layout.simple_list_item_1,
