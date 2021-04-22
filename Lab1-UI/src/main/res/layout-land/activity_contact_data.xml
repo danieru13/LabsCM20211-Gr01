@@ -83,25 +83,17 @@
             android:id="@+id/tilPais"
             style="@style/textInput_style"
             android:hint="@string/pais"
-
-            app:endIconMode="clear_text"
             app:helperText="@string/required"
             app:helperTextTextColor="@color/red"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivPais"
             app:layout_constraintTop_toBottomOf="@+id/tilCorreo">
 
-            <AutoCompleteTextView
-                android:id="@+id/acPais"
-                style="@style/autocomple_style" />
-<!--
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tiPais"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textAutoComplete"/> -->
+                android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
-
 
         <ImageView
             android:id="@+id/ivCiudad"
@@ -117,10 +109,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivCiudad"
             app:layout_constraintTop_toBottomOf="@+id/tilPais">
-            <AutoCompleteTextView
-                android:id="@+id/acCiudad"
-                style="@style/autocomple_style"
-                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiCiudad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
@@ -146,13 +139,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+
             android:id="@+id/btnSiguienteCDA"
-            android:layout_width="0dp"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="36dp"
+            android:layout_marginTop="32dp"
             android:text="@string/next"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tilDireccion" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
