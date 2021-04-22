@@ -1,32 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">LabsCM20211-Gr01</string>
-    <string name="info_contacto">Información de Contácto</string>
-    <string name="required">Requerido*</string>
-    <string name="mail">Correo</string>
-    <string name="pais">Pais</string>
-    <string name="ciudad">Ciudad</string>
-    <string name="direccion">Dirección</string>
-    <string name="next">Siguiente</string>
-    <string name="telefono">Teléfono</string>
+    <string name="info_contacto">Contact Information</string>
+    <string name="required">Required*</string>
+    <string name="mail">Email</string>
+    <string name="pais">Country</string>
+    <string name="ciudad">City</string>
+    <string name="direccion">Address</string>
+    <string name="next">Next</string>
+    <string name="telefono">Phone</string>
     <array name="countries">
         <item>Argentina</item>
         <item>Bolivia</item>
-        <item>Brasil</item>
+        <item>Brazil</item>
         <item>Chile</item>
         <item>Colombia</item>
         <item>Costa Rica</item>
         <item>Cuba</item>
+        <item>Dominican Republic</item>
         <item>Ecuador</item>
         <item>El Salvador</item>
         <item>Guatemala</item>
-        <item>Haití</item>
+        <item>Haiti</item>
         <item>Honduras</item>
-        <item>México</item>
+        <item>Mexico</item>
         <item>Nicaragua</item>
-        <item>Panamá</item>
+        <item>Panama</item>
         <item>Paraguay</item>
-        <item>Perú</item>
-        <item>Republica Dominicana</item>
+        <item>Peru</item>
         <item>Uruguay</item>
         <item>Venezuela</item>
     </array>

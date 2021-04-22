@@ -37,7 +37,7 @@
             android:id="@+id/tilTelefono"
             style="@style/textInput_style"
             android:layout_marginEnd="8dp"
-            android:hint="Teléfono"
+            android:hint="@string/telefono"
             app:endIconMode="clear_text"
             app:helperText="@string/required"
             app:helperTextTextColor="@color/red"

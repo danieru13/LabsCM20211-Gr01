@@ -31,7 +31,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilTelefono"
             style="@style/textInput_style"
-            android:hint="Teléfono"
+            android:hint="@string/telefono"
             app:endIconMode="clear_text"
             app:helperText="@string/required"
             app:helperTextTextColor="@color/red"
