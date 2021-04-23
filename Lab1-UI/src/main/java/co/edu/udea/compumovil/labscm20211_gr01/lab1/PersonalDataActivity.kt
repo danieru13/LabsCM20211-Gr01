@@ -1,6 +1,7 @@
 package co.edu.udea.compumovil.labscm20211_gr01.lab1
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -98,11 +99,15 @@ class PersonalDataActivity : AppCompatActivity() {
     }
 
     fun nextButtonClickHandler(view: View) {
-        Log.i("personal_info", "Información personal")
-        Log.i("personal_info", name_input.getText().toString() + " " + last_name_input.getText().toString())
-        Log.i("personal_info", gender)
-        Log.i("personal_info", "Nació el " + day.toString() +"/"+month.toString()+"/"+year.toString())
-        Log.i("personal_info", education_level)
+        if(name_input.getText().toString() != "" && last_name_input.getText().toString() != "" && year != 0 && month != 0 && day != 0) {
+            Log.i("personal_info", "Información personal")
+            Log.i("personal_info", name_input.getText().toString() + " " + last_name_input.getText().toString())
+            Log.i("personal_info", gender)
+            Log.i("personal_info", "Nació el " + day.toString() + "/" + month.toString() + "/" + year.toString())
+            Log.i("personal_info", education_level)
 
+            val intent = Intent(this, ContactDataActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
