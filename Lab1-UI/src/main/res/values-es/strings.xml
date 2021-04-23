@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LabsCM20211-Gr01</string>
+    <string name="name_input">Nombres</string>
+    <string name="last_name_input">Apellido</string>
+    <string name="gender_input_label">Sexo</string>
+    <string name="gender_male">Hombre</string>
+    <string name="gender_female">Mujer</string>
+    <string name="birth_date_input_label">Fecha de nacimiento</string>
+    <string name="birth_date_input_button">Cambiar</string>
+    <string name="education_level_input">Grado de escolaridad</string>
+    <string-array name="education_level_array">
+        <item>Grado de escolaridad</item>
+        <item>Primaria</item>
+        <item>Secundaria</item>
+        <item>Universitaria</item>
+        <item>Otro</item>
+    </string-array>
+    <string name="next_button">Siguiente</string>
+</resources>
