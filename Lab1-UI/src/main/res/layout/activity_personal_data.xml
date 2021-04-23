@@ -89,6 +89,7 @@
         android:layout_marginBottom="36dp"
         android:text="@string/next_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="nextButtonClickHandler"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

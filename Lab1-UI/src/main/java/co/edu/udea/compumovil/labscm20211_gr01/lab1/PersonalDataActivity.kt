@@ -13,12 +13,11 @@ class PersonalDataActivity : AppCompatActivity() {
 
     lateinit var name_input: EditText
     lateinit var last_name_input: EditText
-    lateinit var gender: String
+    var gender: String = ""
     var day: Int = 0
     var month: Int = 0
     var year: Int = 0
     lateinit var education_level_input: Spinner
-    var education_level_selected: Boolean = false
     lateinit var education_level: String
 
 
@@ -48,13 +47,14 @@ class PersonalDataActivity : AppCompatActivity() {
 
         education_level_input.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                education_level_selected = false
+                education_level = ""
             }
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
                 education_level = education_level_input.selectedItem.toString()
-                education_level_selected = position != 0
-                Log.i("education", education_level)
+                if(position == 0){
+                    education_level = ""
+                }
 
             }
         }
@@ -97,7 +97,12 @@ class PersonalDataActivity : AppCompatActivity() {
 
     }
 
-    /*private fun nextButtonClickHandler(view: View) {
-        Log.i("name", name_input.getText().toString())
-    }*/
+    fun nextButtonClickHandler(view: View) {
+        Log.i("personal_info", "Información personal")
+        Log.i("personal_info", name_input.getText().toString() + " " + last_name_input.getText().toString())
+        Log.i("personal_info", gender)
+        Log.i("personal_info", "Nació el " + day.toString() +"/"+month.toString()+"/"+year.toString())
+        Log.i("personal_info", education_level)
+
+    }
 }
