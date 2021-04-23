@@ -10,13 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LabsCM20211Gr01">
         <activity android:name=".PersonalDataActivity">
-        <activity android:name=".ContactDataActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ContactDataActivity" />
+
     </application>
 
 </manifest>
