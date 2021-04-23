@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.core.view.get
 import java.util.*
 
 class PersonalDataActivity : AppCompatActivity() {
@@ -16,7 +17,9 @@ class PersonalDataActivity : AppCompatActivity() {
     var day: Int = 0
     var month: Int = 0
     var year: Int = 0
-    //lateinit var education_level_input: Spinner
+    lateinit var education_level_input: Spinner
+    var education_level_selected: Boolean = false
+    lateinit var education_level: String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,13 +28,13 @@ class PersonalDataActivity : AppCompatActivity() {
 
         name_input = findViewById<EditText>(R.id.name_input)
         last_name_input = findViewById<EditText>(R.id.last_name_input)
-        //education_level_input = findViewById<Spinner>(R.id.education_level_input)
+        education_level_input = findViewById<Spinner>(R.id.education_level_input)
         /*val button: Button = findViewById<Button>(R.id.to_contact_data_activity_button)
         button.setOnClickListener { view ->
             nextButtonClickHandler(view)
         }*/
 
-        /*ArrayAdapter.createFromResource(
+        ArrayAdapter.createFromResource(
                 this,
                 R.array.education_level_array,
                 android.R.layout.simple_spinner_item
@@ -40,7 +43,21 @@ class PersonalDataActivity : AppCompatActivity() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             // Apply the adapter to the spinner
             education_level_input.adapter = adapter
-        }*/
+        }
+
+
+        education_level_input.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                education_level_selected = false
+            }
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+
+                education_level = education_level_input.selectedItem.toString()
+                education_level_selected = position != 0
+                Log.i("education", education_level)
+
+            }
+        }
 
     }
 

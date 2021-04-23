@@ -9,6 +9,7 @@
     <string name="birth_date_input_button">Change</string>
     <string name="education_level_input">Education level</string>
     <string-array name="education_level_array">
+        <item>Education Level</item>
         <item>Elementary</item>
         <item>Secondary</item>
         <item>University</item>
