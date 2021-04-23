@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:content=".ContactDataActivity">
+
+        <TextView
+            android:id="@+id/tvInfoContacto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/info_contacto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivTelefono"
+            style="@style/icon_style"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toStartOf="@+id/tilTelefono"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInfoContacto"
+            app:srcCompat="@drawable/ic_baseline_phone_24" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTelefono"
+            style="@style/textInput_style"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/telefono"
+            app:endIconMode="clear_text"
+            app:helperText="@string/required"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintEnd_toStartOf="@+id/ivMail"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ivTelefono"
+            app:layout_constraintTop_toBottomOf="@+id/tvInfoContacto">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/ivMail"
+            style="@style/icon_style"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/tilCorreo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tilTelefono"
+            app:layout_constraintTop_toBottomOf="@+id/tvInfoContacto"
+            app:srcCompat="@drawable/ic_baseline_email_24" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCorreo"
+            style="@style/textInput_style"
+
+
+            app:endIconMode="clear_text"
+            app:helperText="@string/required"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ivMail"
+            app:layout_constraintTop_toBottomOf="@+id/tvInfoContacto">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/mail"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/ivPais"
+            style="@style/icon_style"
+            app:layout_constraintEnd_toStartOf="@+id/tilPais"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilCorreo"
+            app:srcCompat="@drawable/ic_baseline_public_24" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPais"
+            style="@style/textInput_style"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/pais"
+            app:endIconMode="clear_text"
+            app:helperText="@string/required"
+            app:helperTextTextColor="@color/red"
+            app:layout_constraintEnd_toStartOf="@+id/ivCiudad"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ivPais"
+            app:layout_constraintTop_toBottomOf="@+id/tilCorreo">
+
+            <AutoCompleteTextView
+                android:id="@+id/acPais"
+                style="@style/autocomple_style"
+                android:imeOptions="flagNoExtractUi" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/ivCiudad"
+            style="@style/icon_style"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/tilCiudad"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tilPais"
+            app:layout_constraintTop_toBottomOf="@+id/tilCorreo"
+            app:srcCompat="@drawable/ic_baseline_location_city_24" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCiudad"
+            style="@style/textInput_style"
+            android:layout_marginTop="16dp"
+            android:hint="@string/ciudad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ivCiudad"
+            app:layout_constraintTop_toBottomOf="@+id/tilCorreo">
+
+            <AutoCompleteTextView
+                android:id="@+id/acCiudad"
+                style="@style/autocomple_style"
+                android:imeOptions="flagNoExtractUi" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/ivDireccion"
+            style="@style/icon_style"
+            app:layout_constraintEnd_toStartOf="@+id/tilDireccion"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilPais"
+            app:srcCompat="@drawable/ic_baseline_home_24" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDireccion"
+            style="@style/textInput_style"
+            android:hint="@string/direccion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ivDireccion"
+            app:layout_constraintTop_toBottomOf="@+id/tilPais">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textNoSuggestions" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSiguienteCDA"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilDireccion" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

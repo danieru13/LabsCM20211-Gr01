@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LabsCM20211-Gr01</string>
+    <string name="info_contacto">Contact Information</string>
+    <string name="required">Required*</string>
+    <string name="mail">Email</string>
+    <string name="pais">Country</string>
+    <string name="ciudad">City</string>
+    <string name="direccion">Address</string>
+    <string name="next">Next</string>
+    <string name="telefono">Phone</string>
+    <string name="datos">Data obtained</string>
+    <array name="countries">
+        <item>Argentina</item>
+        <item>Bolivia</item>
+        <item>Brazil</item>
+        <item>Chile</item>
+        <item>Colombia</item>
+        <item>Costa Rica</item>
+        <item>Cuba</item>
+        <item>Dominican Republic</item>
+        <item>Ecuador</item>
+        <item>El Salvador</item>
+        <item>Guatemala</item>
+        <item>Haiti</item>
+        <item>Honduras</item>
+        <item>Mexico</item>
+        <item>Nicaragua</item>
+        <item>Panama</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Uruguay</item>
+        <item>Venezuela</item>
+    </array>
+    <array name="cities">
+        <item>Bogotá</item>
+        <item>Medellín</item>
+        <item>Cali</item>
+        <item>Barranquilla</item>
+        <item>Bucaramanga</item>
+        <item>Cartagena</item>
+        <item>Manizales</item>
+        <item>Pereira</item>
+        <item>Ibagué</item>
+        <item>Montería</item>
+        <item>Armenia</item>
+        <item>Pasto</item>
+    </array>
+</resources>
